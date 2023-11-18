@@ -23,6 +23,9 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    // utilisation de angular in memory web api 
+    // An in-memory web api for Angular demos and tests that emulates CRUD operations over a RESTy API
+    // en relation avec InMemoryDataService qui return ensemble des pokemons.
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
       dataEncapsulation: false,
     }),
