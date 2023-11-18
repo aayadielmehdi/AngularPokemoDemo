@@ -1,0 +1,9 @@
+<h1 class="center" > MàJ pokemon {{pokemon?.name}}  </h1>
+
+<!-- existe t il un moyen pour ne pas changer la variable qyand je change le nom 
+sans passe par une autre variable. -->
+
+<p *ngIf="pokemon" class="center">
+    <img [src]="pokemon.picture">
+</p>
+<app-pokemon-form *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-form>

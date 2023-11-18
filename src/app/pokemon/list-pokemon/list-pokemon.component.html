@@ -1,0 +1,47 @@
+<!-- <h1 class="center"> Liste de pokemon</h1> -->
+
+<a
+  class="btn-floating btn-large waves-effect waves-light red z-depth-3"
+  style="position: fixed; top: 75px; right: 25px"
+  routerLink="/pokemon/add"
+>
+  +
+</a>
+
+<div class="container">
+  <div class="row">
+    
+    <app-seach-pokemon></app-seach-pokemon>
+
+    <div *ngFor="let pok of pokemonList" class="col m4 s6">
+      <!-- appel de la directive qui change le border et ainsi la couleur de la border -->
+      <div
+        class="card horizontal"
+        (click)="SelectPokemon(pok)"
+        pkmnBorderCard
+        (click)="GoDetailPokemon(pok)"
+      >
+        <div class="card-image">
+          <img [src]="pok.picture" />
+        </div>
+        <div class="card-staked">
+          <div class="card-content">
+            <p>{{ pok.name }}</p>
+            <p>
+              <small>
+                <!-- pipe date avec parametrage sous forme de chaine format date.  -->
+                {{ pok.created | date: "dd/MM/YYYY" }}
+              </small>
+            </p>
+            <span
+              *ngFor="let t of pok.types"
+              class=" {{ t | pokemonTypeColor }} "
+            >
+              {{ t }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

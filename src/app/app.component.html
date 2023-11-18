@@ -1,0 +1,70 @@
+<!-- tous ça c'est pour apprendre -->
+
+
+<!-- attentionn angular html is case sensitive. -->
+
+<!-- <h1>Liste de Pokémons</h1> -->
+
+<!-- syntaxe d'interpolation {{ }}
+    sert pour faire la comunication ts (classe du composant) -> html (template)
+    binding uni directionnel
+-->
+<!-- <p> {{pokemonList[0].name}} </p> -->
+
+<!-- syntaxe de liaison html -> ts -->
+<!-- <p (click)="SelectPokemon(pokemonList[0])"> {{pokemonList[0].name}} </p> -->
+
+<!-- 
+    declarer une variable en template et l'utilise encore en template.
+    avec la #
+ -->
+<!-- <input 
+#input 
+(keyup)="0"  
+type="number" 
+(click)="SelectPokemon_MouseEvent($event)" />
+
+<p>{{ input.value }}</p> -->
+
+<!-- keyup.enter 
+    called pseudo evenement d'angular.
+    faire le traitement que si on appuie sur la touche enter. -->
+
+<!-- <input #input (keyup.enter)="SelectPokemon_MouseEvent(input.valueAsNumber)" type="number" /> -->
+
+<!-- ?  (safe navigation operator)
+    si pokemonselected n'est pas definie ne rien faire aulieu de mettre une erreur -->
+<!-- *ngif directive -->
+<!--  
+    si pokemonselected est non undefined
+    on peut l'utilise pour cache ce paragraph 
+    ou pour ne pas avoir une erreur au niveau de pokemonselected.name si y a pas de ? ou pokemonselected est undefined.
+     -->
+<!-- <p *ngIf="pokemonSelected"> voici le pokemen choisi
+    {{ pokemonSelected?.name }}</p> -->
+
+<!-- <p *ngIf="!pokemonSelected"> Aucun pokemon found
+</p> -->
+
+<!-- directive pour faire une boucle. -->
+<!-- affichage de l'ensemble des pokemons //-->
+<!-- <p *ngFor="let i of pokemonList" >
+    {{i.name}}
+</p>   -->
+
+<!-- let pour le bloc 
+var pour la fonction / global -->
+
+<!-- les directives c'est pour faire un changement au niveau comportement composant -->
+
+<!-- --------------------------------------------------------------------- -->
+
+<nav>
+    <div class=" nav-wrapper teal">
+        <a href="#" class="brand-logo center">
+            pokédex
+        </a>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

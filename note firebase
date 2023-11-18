@@ -1,0 +1,5 @@
+1/ npm install -g firebase-tools
+2/ firebase --version // pour voir si c'est installer.
+3/ firebase login // pour connecter cli au gmail (compte google)
+4/ firebase init
+5/ firebase deploy

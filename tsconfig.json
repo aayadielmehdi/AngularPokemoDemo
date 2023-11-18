@@ -6,6 +6,9 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    
+    "strictPropertyInitialization" : false,   /* pour ne pas toujours initialisé les choses , et mettre undefined sur les valeurs venant du server. pour exemple */
+
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
