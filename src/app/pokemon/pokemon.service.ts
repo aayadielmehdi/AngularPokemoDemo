@@ -19,6 +19,11 @@ import { Pokemon } from "./pokemon";
 export class PokemonService {
   constructor(private httpClient: HttpClient) {}
 
+  // voir app module . ts
+  // utilisation de 
+  // angular-in-memory-web-api
+  // qui fait l'emulateur d'une web api.
+  
   GetPokemonLIst(): Observable<Pokemon[]> {
     // returner un flux qui contiendra des pokemon (async)
     // return POKEMONS; // constant synchrone
